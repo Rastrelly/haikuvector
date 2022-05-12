@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="phaikuvector.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uhaikuvector.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="72"/>
+        <CursorPos X="79" Y="80"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="27">
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="24" Column="47" TopLine="11"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="23" Column="3" TopLine="6"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="43" Column="17" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="51" Column="76" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="89" Column="8" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="88" TopLine="58"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="101" Column="33" TopLine="66"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="53" Column="41" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="54" Column="22" TopLine="38"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="113" Column="41" TopLine="79"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="7" Column="17"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="36" Column="16" TopLine="16"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="45" Column="26" TopLine="16"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="61" Column="31" TopLine="46"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="97" Column="25" TopLine="67"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="105" Column="25" TopLine="75"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="53" Column="28" TopLine="34"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="23" Column="21" TopLine="21"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="65" Column="18" TopLine="35"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="92" Column="18" TopLine="62"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="33" Column="31" TopLine="29"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="94" Column="21" TopLine="61"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="96" Column="9" TopLine="64"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="97" Column="9" TopLine="65"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="9" Column="19"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="167" Column="44" TopLine="151"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="45" Column="7" TopLine="31"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="147" Column="3" TopLine="136"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
