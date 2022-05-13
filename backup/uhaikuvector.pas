@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
-  LazUTF8, Clipbrd;
+  LazUTF8, Clipbrd, Windows;
 
 type
 
@@ -28,6 +28,7 @@ type
     procedure Edit1Change(Sender: TObject);
     procedure Edit2Change(Sender: TObject);
     procedure Edit3Change(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure Image1Click(Sender: TObject);
   private
@@ -36,13 +37,39 @@ type
 
   end;
 
+CONST
+  MM_MAX_NUMAXES =  16;
+  FR_PRIVATE     = $10;
+  FR_NOT_ENUM    = $20;
+
+ TYPE
+  PDesignVector = ^TDesignVector;
+  TDesignVector = Packed Record
+   dvReserved: DWORD;
+   dvNumAxes : DWORD;
+   dvValues  : Array[0..MM_MAX_NUMAXES-1] Of LongInt;
+  End;
+
 var
   Form1: TForm1;
-  vowels:string ='ауоыиэяюёеaeiou';
+  vowels:string ='ауоыиэяюёєїеaeiou';
   lw:integer=0;
-  tmp,n,v,p,a,s:array of string;
+  tmp,n,v,p,a,m,s:array of string;
   f:textfile;
   line:array[0..2]of string;
+  fntn:string='Japanese Brush [Rus by me]';
+
+
+  //
+  Function AddFontResourceEx    (Dir : PAnsiChar;
+                                Flag: Cardinal;
+                                PDV : PDesignVector): Int64; StdCall;
+                                External 'GDI32.dll' Name 'AddFontResourceExA';
+
+ Function RemoveFontResourceEx (Dir : PAnsiChar;
+                                Flag: Cardinal;
+                                PDV : PDesignVector): Int64; StdCall;
+                                External 'GDI32.dll' Name 'RemoveFontResourceExA';
 
 implementation
 
@@ -80,6 +107,11 @@ begin
   while not eof(f) do begin readln(f,t); setlength(a,length(a)+1); a[high(a)]:=t; end;
   closefile(f);
 
+  assignfile(f,fn+'m.txt');
+  reset(f);
+  while not eof(f) do begin readln(f,t); setlength(m,length(m)+1); m[high(m)]:=t; end;
+  closefile(f);
+
   assignfile(f,fn+'s.txt');
   reset(f);
   while not eof(f) do begin readln(f,t); setlength(s,length(s)+1); s[high(s)]:=t; end;
@@ -101,6 +133,7 @@ begin
     'v':line[k]:=line[k]+v[random(length(v))]+' ';
     'p':line[k]:=line[k]+p[random(length(p))]+' ';
     'a':line[k]:=line[k]+a[random(length(a))]+' ';
+    'm':line[k]:=line[k]+m[random(length(m))]+' ';
     's':line[k]:=line[k]+s[random(length(s))]+' ';
     '/':begin inc(k); if(k>2) then break; end;
     end;
@@ -155,10 +188,38 @@ begin
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
+Var
+   strAppPath: String;
 begin
+  //font loading from: https://forum.lazarus.freepascal.org/index.php/topic,21032.0.html
+
   randomize;
   lw:=UTF8Length (vowels);
   loaddata;
+  strAppPath:= ExtractFileDir(Application.ExeName);
+  If FileExists(strAppPath+'\japanesebrushrusbyme.otf') Then
+  begin
+    If AddFontResourceEx(PAnsiChar(strAppPath+'\japanesebrushrusbyme.otf'), FR_Private, Nil) <> 0 Then
+    begin
+
+      edit1.Font.Name:=fntn;
+      edit2.Font.Name:=fntn;
+      edit3.Font.Name:=fntn;
+      label1.Font.Name:=fntn;
+      label2.Font.Name:=fntn;
+      label3.Font.Name:=fntn;
+      button1.Font.Name:=fntn;
+      button2.Font.Name:=fntn;
+      SendMessage(Form1.Handle, WM_FONTCHANGE, 0, 0);
+
+    end
+    else
+    begin
+      ShowMessage('Font add failed.');
+    end;
+  end
+  else ShowMessage('File not found: '+strAppPath+'japanesebrushrusbyme.otf');
+
 end;
 
 procedure TForm1.Edit1Change(Sender: TObject);
@@ -194,6 +255,18 @@ begin
   if (cnv=0) or (cnv>7) then Label3.Font.Color:=clRed else Label3.Font.Color:=clGreen;
   Label3.Caption:=inttostr(cnv);
 end;
+
+procedure TForm1.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+Var
+  AppPath: String;
+Begin
+ AppPath:= ExtractFileDir(Application.ExeName);
+
+  If FileExists(AppPath+'\japanesebrushrusbyme.otf')
+  Then
+   If RemoveFontResourceEx(PAnsiChar(AppPath+'\japanesebrushrusbyme.otf'), FR_Private, Nil) <> 0
+   Then SendMessage(Form1.Handle, WM_FONTCHANGE, 0, 0);
+End;
 
 end.
 

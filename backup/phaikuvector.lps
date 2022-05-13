@@ -12,17 +12,18 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="21"/>
       </Unit>
       <Unit>
         <Filename Value="uhaikuvector.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="72"/>
-        <CursorPos X="79" Y="80"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="36"/>
+        <CursorPos X="30" Y="55"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -30,43 +31,11 @@
     <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="uhaikuvector.pas"/>
-        <Caret Line="24" Column="47" TopLine="11"/>
-      </Position>
-      <Position>
-        <Filename Value="uhaikuvector.pas"/>
-        <Caret Line="23" Column="3" TopLine="6"/>
-      </Position>
-      <Position>
-        <Filename Value="uhaikuvector.pas"/>
-        <Caret Line="43" Column="17" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="uhaikuvector.pas"/>
-        <Caret Line="51" Column="76" TopLine="37"/>
-      </Position>
-      <Position>
-        <Filename Value="uhaikuvector.pas"/>
-        <Caret Line="89" Column="8" TopLine="56"/>
-      </Position>
-      <Position>
-        <Filename Value="uhaikuvector.pas"/>
-        <Caret Line="88" TopLine="58"/>
-      </Position>
-      <Position>
-        <Filename Value="uhaikuvector.pas"/>
-        <Caret Line="101" Column="33" TopLine="66"/>
-      </Position>
-      <Position>
-        <Filename Value="uhaikuvector.pas"/>
         <Caret Line="53" Column="41" TopLine="37"/>
       </Position>
       <Position>
         <Filename Value="uhaikuvector.pas"/>
         <Caret Line="54" Column="22" TopLine="38"/>
-      </Position>
-      <Position>
-        <Filename Value="uhaikuvector.pas"/>
-        <Caret Line="61" Column="36" TopLine="83"/>
       </Position>
       <Position>
         <Filename Value="uhaikuvector.pas"/>
@@ -142,11 +111,43 @@
       </Position>
       <Position>
         <Filename Value="uhaikuvector.pas"/>
-        <Caret Line="94" Column="13" TopLine="136"/>
+        <Caret Line="147" Column="3" TopLine="136"/>
       </Position>
       <Position>
         <Filename Value="uhaikuvector.pas"/>
-        <Caret Line="147" Column="3" TopLine="136"/>
+        <Caret Line="172" Column="12" TopLine="146"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="175" Column="5" TopLine="140"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="46" Column="15" TopLine="179"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="56" Column="83" TopLine="30"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="39" TopLine="26"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="9" Column="28" TopLine="51"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="203" TopLine="185"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="59" Column="30" TopLine="150"/>
+      </Position>
+      <Position>
+        <Filename Value="uhaikuvector.pas"/>
+        <Caret Line="192" Column="3" TopLine="188"/>
       </Position>
     </JumpHistory>
     <RunParams>
