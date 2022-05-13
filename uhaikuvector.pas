@@ -57,6 +57,7 @@ var
   tmp,n,v,p,a,m,s:array of string;
   f:textfile;
   line:array[0..2]of string;
+  fntf:string='japanesebrushrusbyme.otf';
   fntn:string='Japanese Brush [Rus by me]';
 
 
@@ -76,6 +77,18 @@ implementation
 {$R *.lfm}
 
 { TForm1 }
+
+procedure loadconfig;
+var t,fn:string;
+begin
+  fn:=extractfiledir(application.exename)+'\';
+  assignfile(f,fn+'config.txt');
+  reset(f);
+  readln(f,fntf);
+  readln(f,fntn);
+  CloseFile(f);
+end;
+
 
 procedure loaddata;
 var t,fn:string;
@@ -193,13 +206,16 @@ Var
 begin
   //font loading from: https://forum.lazarus.freepascal.org/index.php/topic,21032.0.html
 
+  loadconfig;
+
   randomize;
   lw:=UTF8Length (vowels);
   loaddata;
+
   strAppPath:= ExtractFileDir(Application.ExeName);
-  If FileExists(strAppPath+'\japanesebrushrusbyme.otf') Then
+  If FileExists(strAppPath+'\'+fntf) Then
   begin
-    If AddFontResourceEx(PAnsiChar(strAppPath+'\japanesebrushrusbyme.otf'), FR_Private, Nil) <> 0 Then
+    If AddFontResourceEx(PAnsiChar(strAppPath+'\'+fntf), FR_Private, Nil) <> 0 Then
     begin
 
       edit1.Font.Name:=fntn;
